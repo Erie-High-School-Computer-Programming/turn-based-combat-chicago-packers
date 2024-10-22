@@ -28,7 +28,7 @@ class Game:
         then have the computer choose a character at random
         It should randomly select a player to go first"""
         self.player_turn = True
-        print("Welcome to the game")
+        print("Welcome to Quahog")
         print(self.current_turn)
 
     def turn(self, current_turn):

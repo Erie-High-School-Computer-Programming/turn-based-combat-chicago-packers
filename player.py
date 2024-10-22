@@ -11,10 +11,10 @@ class Player:
         selected move. The move should deal damage to the target character"""
         target.hp -= move
 
-    move_list = {"Punch": {"damage": 10
-                            "accuracy": 50},
-                "Kick": 7,
-                "Body Slam": 15}
+    move_list = {"Punch": {"damage": 10,
+                           "accuracy": 75}
+                 }
+
     import random
     if random.randint(0, 100) < move_list["Punch"]["accuracy"]:
         Ernie.hp -= move_list["Punch"]["damage"]
