@@ -17,6 +17,8 @@
 # The game should have a way to restart the game.
 
 # The game should have a way to exit the game.
+from player import Player
+import sys
 
 class Game:
     def __init__(self):
@@ -27,13 +29,15 @@ class Game:
         and allow them to select a character,
         then have the computer choose a character at random
         It should randomly select a player to go first"""
-        pass
+        self.player_turn = True
+        print("Welcome to Quahog")
+        print(self.current_turn)
 
     def turn(self, current_turn):
         """This method should show the current health of both players, 
         and allow the player to select a move to use on the opponent
-        If it is the computer player's turn, it should select a move at random"""
-        pass
+        If it is the computer player's turn, it should select a move at random""" 
+        self.current_turn = not self.player_turn
 
     def check_winner(self):
         """This method should check if either player's health has reached 0
@@ -46,8 +50,16 @@ class Game:
 
     def exit(self):
         """This method should allow the player to exit the game"""
-        pass
+        sys.exit()
 
     
 def main():
-    pass
+    game = Game()
+    game.turn(1)
+    game.check_winner()
+    game.turn(2)
+    game.check_winner()
+
+
+
+main()
