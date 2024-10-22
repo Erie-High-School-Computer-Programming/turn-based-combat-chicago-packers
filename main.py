@@ -17,6 +17,8 @@
 # The game should have a way to restart the game.
 
 # The game should have a way to exit the game.
+from player import Player
+import sys
 
 class Game:
     def __init__(self):
@@ -48,7 +50,7 @@ class Game:
 
     def exit(self):
         """This method should allow the player to exit the game"""
-        pass
+        sys.exit()
 
     
 def main():
